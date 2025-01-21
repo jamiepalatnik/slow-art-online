@@ -1,0 +1,7 @@
+[project]
+name = "slow-art-online"
+version = "0.1.0"
+description = "Slow Art Online: a full-stack web app using Python, Flask, and the Met API to create an art viewer inspired by Slow Art Day"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
