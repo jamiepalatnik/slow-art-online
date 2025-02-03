@@ -11,5 +11,9 @@ def main():
     img = artwork_data["primaryImage"]
     return render_template("index.html", img=img)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 if __name__ == "__main__":
     main()
