@@ -6,8 +6,9 @@
 * [ ] Add timer (choose 5 or 10 minutes) 
 * [ ] Add filters for musuem collections
 * [ ] Hamburger menu in top right
-* [ ] About page 
+* [x] About page 
 * [ ] Reading Room page
+* [ ] Work on site header and footer
 * [ ] Deploy at slowartonline.com
 * [ ] Complete project description in README
 

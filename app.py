@@ -15,5 +15,9 @@ def main():
 def about():
     return render_template("about.html")
 
+@app.route("/reading-room")
+def reading_room():
+    return render_template("reading-room.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
