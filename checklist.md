@@ -7,7 +7,7 @@
 * [ ] Add filters for musuem collections
 * [ ] Hamburger menu in top right
 * [x] About page 
-* [ ] Reading Room page
+* [x] Reading Room page
 * [ ] Work on site header and footer
 * [ ] Deploy at slowartonline.com
 * [ ] Complete project description in README
@@ -17,5 +17,5 @@
 ## Resolved
 
 ## Updates Log
-* 2025-02-03: Add planning checklist
+* 2025-02-03: Added planning checklist, pages, and menu
 * 2025-01-21: Initial project setup and research, achieved working prototype
