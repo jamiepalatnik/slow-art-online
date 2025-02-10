@@ -3,9 +3,9 @@
 * [x] Initial project setup
 * [x] Load one test image from the Met API
 * [x] Load random image from list
-* [ ] Filter objects to remove objects without image and load random
+* [x] Filter objects to remove objects without image and load random
+* [x] Move random image to homepage and merge branch
 * [ ] Add button to load new random image
-* [ ] Move random image to homepage and merge branch
 * [ ] Add timer (choose 5 or 10 minutes) 
 * [ ] Add filters for musuem collections
 * [ ] Hamburger menu in top right
