@@ -1,32 +1,91 @@
 import requests
 import sys
+import random
 
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
-@app.route("/")
-def main():
+# Return the object record for a random object from a given list of objects
+def select_random_object(objectIDs):
 
-    # Get data from the Met API
-    url = f"https://collectionapi.metmuseum.org/public/collection/v1/objects/437869"
+    # Select random object ID from list
+    random_objectID = str(random.choice(objectIDs))
+
+    # Create object endpoint URL for random object ID
+    url = (
+        "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
+        + random_objectID
+    )
+
+    # API call for random object
     try:
-        response = requests.get(url)
-        response.raise_for_status()
+        object_response = requests.get(url)
+        object_response.raise_for_status()
     except requests.HTTPError:
         print("Could not complete request.")
         sys.exit(1)
 
+    object_content = object_response.json()
+
+    return object_content
+
+@app.route("/")
+def main():
+    # Get data for object IDs from the American Wing that are paintings
+    try:
+        response = requests.get(
+            "https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1&q=painting"
+        )
+        response.raise_for_status()
+    except requests.HTTPError:
+        print("Couldn't complete request!")
+        sys.exit(1)
+
     content = response.json()
-    img = content["primaryImage"]
-    return render_template("index.html", img=img)
+
+    # Get list of object IDs from JSON
+    objectIDs = content["objectIDs"]
+
+    # Pass list of objectIDs to select_random_object function
+    object_content = select_random_object(objectIDs)
+
+    # # Blank image for testing
+    # object_response = requests.get("https://collectionapi.metmuseum.org/public/collection/v1/objects/17120")
+    # object_content = object_response.json()
+
+    # Get primary image from object record if it exists, or select new object
+    while True:
+        try:
+            random_image = object_content["primaryImage"]
+            # Select new random object if there is no primary image
+            if random_image == "": 
+                raise ValueError
+            else:
+                break
+        except ValueError:
+            object_content = select_random_object(objectIDs)
+
+    return render_template("index.html", random_image=random_image)
+
+
+# # Get random image from the Met API
+# @app.route("/random-image")
+
 
 @app.route("/about")
 def about():
     return render_template("about.html")
 
+
 @app.route("/reading-room")
 def reading_room():
     return render_template("reading-room.html")
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Don't launch server when running app with test flag
+    if len(sys.argv) > 1 and sys.argv[1] == "test":
+        main()
+    else: 
+        app.run(debug=True)
