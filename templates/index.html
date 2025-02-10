@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block main %}
   <h1>Slow Art Online</h1>
-  <img src="{{ random_image }}" width="500">
+  <button id="getRandomButton">Get random image</button>
+  <br>
+  <img id="random-image" src="{{ random_image }}" width="500">
 {% endblock %}

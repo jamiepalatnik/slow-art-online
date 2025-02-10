@@ -32,6 +32,13 @@ def select_random_object(objectIDs):
 
 @app.route("/")
 def main():
+    object_content = get_random_object()
+    random_image = object_content["primaryImage"]
+    return render_template("index.html", random_image=random_image)
+
+# Get object record for random object from the Met API
+@app.route("/random-image")
+def get_random_object():
     # Get data for object IDs from the American Wing that are paintings
     try:
         response = requests.get(
@@ -66,11 +73,7 @@ def main():
         except ValueError:
             object_content = select_random_object(objectIDs)
 
-    return render_template("index.html", random_image=random_image)
-
-
-# # Get random image from the Met API
-# @app.route("/random-image")
+    return object_content
 
 
 @app.route("/about")

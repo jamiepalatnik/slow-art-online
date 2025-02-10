@@ -1,9 +1,12 @@
 // Get random image from Python route
-document.getElementById('getRandomButton').addEventListener('click', function() {
-    fetch('/random_image')
+const getRandomButton = document.getElementById('getRandomButton');
+
+getRandomButton.onclick = function() {
+    fetch('/random-image')
         .then(response => response.json())
         .then(data => {
-            // Update image source and details
-            document.getElementById('artImage').src = data.image_url;
-        });
-});
+            document.getElementById('random-image').src = data["primaryImage"];
+        })
+        .catch(error => console.error('Error fetching image:', error));
+
+} 
