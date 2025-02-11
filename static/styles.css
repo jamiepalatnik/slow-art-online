@@ -45,11 +45,15 @@ p, ul {
 
 .site-title {
     color: #f8f8f8;
-    padding: 8px 8px 8px 32px;
+    padding: 0px 8px 8px 32px;
+    margin: 8px auto;
 }
 
 .random-button {
-    margin: 8px 8px 8px 32px;
+    margin: 8px 8px 32px 32px;
+    padding: 8px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 /* When you mouse over the navigation links, change their color */
