@@ -5,7 +5,7 @@ body {
 
 /* Text styles */
 h1 {
-    color: rgb(0, 0, 0);opacity:0.8;
+    color: #3b5c00;
     font-size: 48px;
     font-family: "EB Garamond", serif;
     font-weight: 500;
@@ -19,7 +19,7 @@ h2 {
 }
 
 p, ul {
-    color: rgb(0, 0, 0);opacity:0.8;
+    color: #000;
     font-size: 24px; 
     font-family: "Open Sans", sans-serif;
 }
