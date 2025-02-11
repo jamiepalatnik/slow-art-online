@@ -10,3 +10,13 @@ getRandomButton.onclick = function() {
         .catch(error => console.error('Error fetching image:', error));
 
 } 
+
+// Set the width of the side panel to 400px
+function openPanel() {
+    document.getElementById("side-panel").style.width = "325px";
+  }
+  
+// Set the width of the side panel to 0
+  function closePanel() {
+    document.getElementById("side-panel").style.width = "0";
+  }
