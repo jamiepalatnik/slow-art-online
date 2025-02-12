@@ -7,8 +7,13 @@
 * [x] Move random image to homepage and merge branch
 * [x] Add button to load new random image
 * [ ] Add timer (choose 5 or 10 minutes) 
+* [x] Change side panel from black to dark grey
+* [ ] Reevaluate fonts (prettier sans serif than Open Sans)
+* [ ] Add random button and timer to component in side panel, visible icons when panel is closed
+* [ ] Design logo in Inkscape
+* [ ] Display title and artist from Met API
+* [ ] Cross-browser and cross-device testing
 * [ ] Work on responsiveness on smaller screen sizes
-* [ ] Add filters for musuem collections
 * [x] Hide get new artwork button except on home
 * [x] Hamburger menu in top right
 * [x] Add panel to display site title, menu, timer, etc.
