@@ -7,8 +7,9 @@
 * [x] Move random image to homepage and merge branch
 * [x] Add button to load new random image
 * [ ] Add timer (choose 5 or 10 minutes) 
+* [ ] Work on responsiveness on smaller screen sizes
 * [ ] Add filters for musuem collections
-* [ ] Hide get new artwork button except on home
+* [x] Hide get new artwork button except on home
 * [x] Hamburger menu in top right
 * [x] Add panel to display site title, menu, timer, etc.
 * [x] About page 

@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 {% block main %}
-<div id="main">
-  <img id="random-image" src="{{ random_image }}" width="600">
+<div id="main" class="home">
+  <img id="random-image" src="{{ random_image }}">
 </div>
 <div id="side-panel" class="side-panel">
   <a href="javascript:void(0)" class="close-button" onclick="closePanel()">&times;</a>
   <h1 class="site-title"><a href="/">Slow Art Online</a></h1>
-  <button id="getRandomButton" class="random-button">Get random artwork</button>
   <nav>
       <a href="/about">About</a>
       <a href="/reading-room">Reading Room</a>
   </nav>
+  <button id="getRandomButton" class="random-button">Get random artwork</button>
 </div>
 {% endblock %}

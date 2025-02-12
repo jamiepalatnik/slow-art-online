@@ -1,6 +1,6 @@
 body {
     background-color: #f8f8f8;
-    margin: 100px;
+    margin: 0;
 }
 
 /* Text styles */
@@ -28,27 +28,59 @@ a {
     color: #3b5c00;
 }
 
+#main {
+    position: relative;
+}
+
+#main.home {
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.content {
+    padding: 50px;
+ }
+
+@media screen and (min-width: 992px) {
+    #main {
+        width: calc(100% - 325px);
+    }
+
+    #main.home {
+       transition: 0.5s; 
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #main.home {
+       width: calc(100% - 0px) !important;
+    }
+}
+
 /* Artwork */
 #random-image {
     display: block;
-    margin: 0 auto;
+    position: absolute;
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 50px);
 }
 
 /* Side panel */
 .side-panel {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 325px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
-    background-color: rgb(0, 0, 0);opacity:0.8;
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 50px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
 }
 
-/* Side panel element */
 .side-panel a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -61,6 +93,17 @@ a {
 
 .side-panel a:hover {
     color: #3b5c00;
+}
+
+.open-button {
+    cursor: pointer;
+}
+  
+/* Small screens */
+@media screen and (max-width: 991px) {
+    .side-panel {
+        width: 100%;
+    }
 }
 
 /* Site title */
@@ -105,10 +148,4 @@ a {
     right: 31px;
     font-size: 44px;
     margin-right: 50px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the side panel (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .side-panel {padding-top: 15px;}
-  .side-panel a {font-size: 18px;}
 }
