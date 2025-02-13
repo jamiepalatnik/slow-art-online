@@ -117,8 +117,8 @@ a {
     letter-spacing: 1px;
 }
 
-/* Get random artwork button */
-.random-button {
+/* Button styles */
+button {
     margin: 8px 8px 32px 32px;
     padding: 10px;
     border: none;
