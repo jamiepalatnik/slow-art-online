@@ -7,13 +7,13 @@ body {
 h1 {
     color: rgba(0, 0, 0, .8);
     font-size: 48px;
-    font-family: "EB Garamond", serif;
+    font-family: "Rufina", serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 h2 {
-    font-family: "EB Garamond", serif;
+    font-family: "Rufina", serif;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -21,7 +21,7 @@ h2 {
 p, ul {
     color: #000;
     font-size: 24px; 
-    font-family: "Open Sans", sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
 a {
@@ -88,7 +88,7 @@ a {
     color: #f8f8f8;
     display: block;
     transition: 0.3s;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
 .side-panel a:hover {
@@ -111,7 +111,7 @@ a {
 .site-title a {
     margin: 8px auto;
     font-size: 48px;
-    font-family: "EB Garamond", serif;
+    font-family: "Rufina", serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -125,7 +125,7 @@ a {
     border-radius: 20px;
     font-weight: 500;
     font-size: 18px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
 .random-button:hover {
