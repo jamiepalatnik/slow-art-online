@@ -24,31 +24,39 @@ function closePanel() {
 }
 
 // TODO: Timer
-// Set the timer start and end time
-var timerStart = new Date().getMinutes();
-var timerEnd = new Date();
-timerEnd.setMinutes(timerStart + 5); 
 
-// Update the timer every second
-var x = setInterval(function() {
+// Define timer button
+const timerButton = document.getElementById('timerButton');
 
-  // Get current status
-  var now = new Date().getTime();
+timerButton.onclick = function() {
 
-  // Find the time between the start time and the end time
-  var distance = countDownDate - now;
+    // Set the timer to 5 minutes
+    let minutes = 5;
+    let duration = minutes * 60 * 1000; // Duration in milliseconds
+    let startTime = Date.now();
+    let endTime = startTime + duration;
 
-  // Time calculations for minutes and seconds
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    function updateTimer() {
+        let currentTime = Date.now();
+        let remainingTime = endTime - currentTime;
+      
+        if (remainingTime <= 0) {
+          clearInterval(timerInterval);
+          document.getElementById("timerDisplay").innerHTML = "Done";
+          return;
+        }
+      
+        let remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        let remainingSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+        // Add 0 to seconds display when there are less than 10 seconds remaining
+        if (remainingSeconds < 10) {
+            remainingSeconds = "0" + remainingSeconds
+        }
+      
+        // Display the remaining time
+        document.getElementById("timerDisplay").innerHTML = remainingMinutes + ":" + remainingSeconds;
+      }
+      
+      let timerInterval = setInterval(updateTimer, 1000);
+} 
