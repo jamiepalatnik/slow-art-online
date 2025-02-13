@@ -43,6 +43,22 @@ a {
     padding: 50px;
  }
 
+nav {
+    margin-bottom: 32px;
+}
+
+svg {
+    fill: #000
+}
+
+nav {
+    margin-bottom: 32px;
+}
+
+svg {
+    fill: #000
+}
+
 @media screen and (min-width: 992px) {
     #main {
         width: calc(100% - 325px);
@@ -119,18 +135,26 @@ a {
 
 /* Button styles */
 button {
-    margin: 8px 8px 32px 32px;
-    padding: 10px;
+    margin: 0 0 0 32px;
+    padding: 8px 12px 8px 8px;
     border: none;
     border-radius: 20px;
     font-weight: 500;
     font-size: 18px;
     font-family: "Karla", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
-.random-button:hover {
+button:hover {
     background-color: #3b5c00;
     color: #f1f1f1;
+}
+
+button:hover svg {
+    fill: #f1f1f1
 }
 
 /* Position and style the close button (top right corner) */

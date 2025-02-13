@@ -23,6 +23,7 @@ function closePanel() {
     document.querySelector(".home").style.width = "calc(100% - 0px)";
 }
 
+// TODO: Timer
 // Set the timer start and end time
 var timerStart = new Date().getMinutes();
 var timerEnd = new Date();
@@ -37,9 +38,7 @@ var x = setInterval(function() {
   // Find the time between the start time and the end time
   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  // Time calculations for minutes and seconds
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
