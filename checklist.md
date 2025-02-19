@@ -8,9 +8,9 @@
 * [x] Add button to load new random image
 * [ ] Add 5 minute timer
 * [x] Change side panel from black to dark grey
-* [ ] Reevaluate fonts (prettier sans serif than Open Sans)
-* [ ] Design logo in Inkscape
+* [x] Reevaluate fonts (prettier sans serif than Open Sans)
 * [ ] Deploy at slowartonline.com
+* [ ] Design logo in Inkscape
 * [ ] Display title and artist from Met API
 * [ ] Add random button and timer to component in side panel, visible icons when panel is closed
 * [ ] Cross-browser and cross-device testing

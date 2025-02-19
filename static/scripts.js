@@ -23,24 +23,24 @@ function closePanel() {
     document.querySelector(".home").style.width = "calc(100% - 0px)";
 }
 
-// TODO: Timer
+// Timer
 
 // Define timer function and variables
 const timerButton = document.getElementById('timerButton');
-let timerState = "stopped";
+let running = false;
 
-// Set the timer to 5 minutes (1 minute for testing)
+// Set the timer to 5 minutes
 let minutes = 5;
 let duration = minutes * 60 * 1000; // Duration in milliseconds
-let startTime = Date.now();
-let endTime = startTime + duration;
+let endTime;
 let pausedTime;
+
+// Display total duration when clicked to make sure timer starts at the correct time
+document.getElementById("timerDisplay").innerHTML = minutes + ":00";
 
 // Define timer countdown function
 function updateTimer() {
-
-    let currentTime = Date.now();
-    let remainingTime = endTime - currentTime;
+    let remainingTime = endTime - performance.now();
     let remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
     let remainingSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
@@ -50,8 +50,10 @@ function updateTimer() {
     }
 
     if (remainingTime <= 0) {
-        timerState = "stopped";
+        running = false;
         document.getElementById("timerDisplay").innerHTML = "Done";
+        duration = minutes * 60 * 1000; // Reset duration
+        document.getElementById("timerButtonText").innerHTML = "Reset timer";
         return;
     }
 
@@ -59,21 +61,22 @@ function updateTimer() {
     document.getElementById("timerDisplay").innerHTML = remainingMinutes + ":" + remainingSeconds;
 
     // Update timer button text depending on timer state
-    if (timerState === "running") {
+    if (running) {
         requestAnimationFrame(updateTimer);
         document.getElementById("timerButtonText").innerHTML = "Pause timer";
-    } else if (timerState === "stopped" || timerState === "paused") {
+    } else if (!running) {
         document.getElementById("timerButtonText").innerHTML = "Start timer";
     }
 }
 
 // When timer button is clicked, update timer state depending on current timer state
 timerButton.onclick = function() {
-    if (timerState === "stopped" || timerState === "paused") {
-        timerState = "running";
+    if (running) {
+        running = false;
+        duration = endTime - performance.now(); 
+    } else {
+        running = true;
+        endTime = performance.now() + duration;
         requestAnimationFrame(updateTimer);
-    } else if (timerState === "running") {
-        timerState = "paused";
-        // TODO Store elapsed time in a variable so when the timer restarts it can restart where it left off
     }
 }
