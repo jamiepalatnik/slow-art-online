@@ -51,14 +51,6 @@ svg {
     fill: #000
 }
 
-nav {
-    margin-bottom: 32px;
-}
-
-svg {
-    fill: #000
-}
-
 @media screen and (min-width: 992px) {
     #main {
         width: calc(100% - 325px);
@@ -97,15 +89,26 @@ svg {
     transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
 }
 
-.side-panel a, 
+.side-panel a,
+.art-info p,
 .timer-display {
-    padding: 8px 8px 8px 32px;
+    margin: 0;
+    padding: 8px 32px 8px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 24px;
     color: #f8f8f8;
     display: block;
     transition: 0.3s;
     font-family: "Karla", sans-serif;
+}
+
+.art-info p,
+.timer-display {
+    font-size: 18px;
+}
+
+.art-info {
+    margin-bottom: 32px;
 }
 
 .side-panel a:hover {
@@ -137,7 +140,7 @@ button {
 
 /* Button styles */
 button {
-    margin: 0 0 0 32px;
+    margin: 8px 32px 8px;
     padding: 8px 12px 8px 8px;
     border: none;
     border-radius: 20px;

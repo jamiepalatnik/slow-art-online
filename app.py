@@ -34,7 +34,9 @@ def select_random_object(objectIDs):
 def main():
     object_content = get_random_object()
     random_image = object_content["primaryImage"]
-    return render_template("index.html", random_image=random_image)
+    title = object_content["title"]
+    artist_display_name = object_content["artistDisplayName"]
+    return render_template("index.html", random_image=random_image, title=title, artist_display_name=artist_display_name)
 
 # Get object record for random object from the Met API
 @app.route("/random-image")

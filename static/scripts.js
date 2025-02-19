@@ -6,6 +6,8 @@ getRandomButton.onclick = function() {
         .then(response => response.json())
         .then(data => {
             document.getElementById('random-image').src = data["primaryImage"];
+            document.getElementById('objectTitle').innerHTML = data["title"];
+            document.getElementById('artistDisplayName').innerHTML = data["artistDisplayName"];
         })
         .catch(error => console.error('Error fetching image:', error));
 

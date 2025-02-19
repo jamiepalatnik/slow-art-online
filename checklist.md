@@ -6,12 +6,12 @@
 * [x] Filter objects to remove objects without image and load random
 * [x] Move random image to homepage and merge branch
 * [x] Add button to load new random image
-* [ ] Add 5 minute timer
+* [x] Add 5 minute timer
 * [x] Change side panel from black to dark grey
 * [x] Reevaluate fonts (prettier sans serif than Open Sans)
+* [x] Display title and artist from Met API
 * [ ] Deploy at slowartonline.com
 * [ ] Design logo in Inkscape
-* [ ] Display title and artist from Met API
 * [ ] Add random button and timer to component in side panel, visible icons when panel is closed
 * [ ] Cross-browser and cross-device testing
 * [ ] Work on responsiveness on smaller screen sizes
