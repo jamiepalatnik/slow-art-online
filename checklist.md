@@ -10,7 +10,7 @@
 * [x] Change side panel from black to dark grey
 * [x] Reevaluate fonts (prettier sans serif than Open Sans)
 * [x] Display title and artist from Met API
-* [ ] Deploy at slowartonline.com
+* [x] Deploy at slowartonline.com
 * [ ] Design logo in Inkscape
 * [ ] Add random button and timer to component in side panel, visible icons when panel is closed
 * [ ] Cross-browser and cross-device testing
