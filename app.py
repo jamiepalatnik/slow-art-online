@@ -1,6 +1,8 @@
+import os
+import random
 import requests
 import sys
-import random
+
 
 from flask import Flask, render_template
 
@@ -93,4 +95,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "test":
         main()
     else: 
-        app.run(debug=True)
+        port = int(os.environ.get("PORT", 8080))
+        app.run(host="0.0.0.0", port=port, debug=True)
