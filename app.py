@@ -89,8 +89,4 @@ def reading_room():
 
 
 if __name__ == "__main__":
-    # Don't launch server when running app with test flag
-    if len(sys.argv) > 1 and sys.argv[1] == "test":
-        main()
-    else: 
-        app.run(debug=True)
+    main()
