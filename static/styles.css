@@ -177,3 +177,16 @@ button:hover svg {
     right: 31px;
     font-size: 44px;
 }
+
+.timer-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+#timerButton {
+    margin-right: 0;
+}
+
+#resetTimerButton {
+    margin-left: 0;
+}
