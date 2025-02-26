@@ -11,7 +11,7 @@
 * [x] Reevaluate fonts (prettier sans serif than Open Sans)
 * [x] Display title and artist from Met API
 * [x] Deploy at slowartonline.com
-* [ ] Design logo in Inkscape
+* [x] Design logo in Inkscape and add to site
 * [ ] Add random button and timer to component in side panel, visible icons when panel is closed
 * [ ] Cross-browser and cross-device testing
 * [ ] Work on responsiveness on smaller screen sizes
