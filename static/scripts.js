@@ -29,6 +29,7 @@ function closePanel() {
 
 // Define timer function and variables
 const timerButton = document.getElementById('timerButton');
+const resetTimerButton = document.getElementById("resetTimerButton");
 let running = false;
 
 // Set the timer to 5 minutes
@@ -82,3 +83,12 @@ timerButton.onclick = function() {
         requestAnimationFrame(updateTimer);
     }
 }
+
+// When reset timer button is clicked, reset timer
+resetTimerButton.onclick = function() {
+        // Display total duration when clicked to make sure timer starts at the correct time
+        document.getElementById("timerDisplay").innerHTML = minutes + ":00";
+        // Update duration and endTime to starting values, with an extra second to allow the full time to display
+        duration = (minutes * 60 * 1000) + 1000;
+        endTime = performance.now() + duration;
+    } 
