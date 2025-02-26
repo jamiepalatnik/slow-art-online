@@ -61,12 +61,6 @@ svg {
     }
 }
 
-@media screen and (max-width: 991px) {
-    #main.home {
-       width: calc(100% - 0px) !important;
-    }
-}
-
 /* Artwork */
 #random-image {
     display: block;
@@ -84,8 +78,7 @@ svg {
     top: 0; /* Stay at the top */
     right: 0;
     background-color: #171717;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 50px; /* Place content 60px from the top */
+    padding-top: 48px; /* Place content 48px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
 }
 
@@ -189,4 +182,15 @@ button:hover svg {
 
 #resetTimerButton {
     margin-left: 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 991px) {
+    #main.home {
+       width: calc(100% - 0px) !important;
+    }
+
+    .side-panel {
+        padding-top: 0; 
+    }
 }
