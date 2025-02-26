@@ -190,8 +190,4 @@ button:hover svg {
     #main.home {
        width: calc(100% - 0px) !important;
     }
-
-    .side-panel {
-        padding-top: 0; 
-    }
 }
