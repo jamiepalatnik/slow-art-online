@@ -12,9 +12,9 @@
 * [x] Display title and artist from Met API
 * [x] Deploy at slowartonline.com
 * [x] Design logo in Inkscape and add to site
-* [ ] Add random button and timer to component in side panel, visible icons when panel is closed
+* [x] Add random button and timer to component in side panel, visible icons when panel is closed
 * [ ] Cross-browser and cross-device testing
-* [ ] Work on responsiveness on smaller screen sizes
+* [ ] Work on responsiveness on smaller screen sizes: hide side panel on load for small screens
 * [x] Hide get new artwork button except on home
 * [x] Hamburger menu in top right
 * [x] Add panel to display site title, menu, timer, etc.
