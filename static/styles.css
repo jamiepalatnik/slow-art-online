@@ -78,7 +78,7 @@ svg {
     top: 0; /* Stay at the top */
     right: 0;
     background-color: #171717;
-    overflow-x: auto; /* Enable horizontal scroll only when needed*/
+    overflow-y: auto; /* Enable vertical scroll when needed*/
     padding-top: 48px; /* Place content 48px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
 }
