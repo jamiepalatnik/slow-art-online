@@ -78,7 +78,7 @@ svg {
     top: 0; /* Stay at the top */
     right: 0;
     background-color: #171717;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-x: auto; /* Enable horizontal scroll only when needed*/
     padding-top: 48px; /* Place content 48px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the panel */
 }
@@ -121,13 +121,6 @@ svg {
 .close-button,
 button {
     cursor: pointer;
-}
-  
-/* Small screens */
-@media screen and (max-width: 991px) {
-    .side-panel {
-        width: 100%;
-    }
 }
 
 /* Site title */
@@ -211,5 +204,9 @@ body:not(.homepage) .random-button {
 @media screen and (max-width: 991px) {
     #main.home {
        width: calc(100% - 0px) !important;
+    }
+
+    .side-panel {
+        width: 100%;
     }
 }
