@@ -180,7 +180,7 @@ button:hover svg {
 }
 
 /* Only display small random button on homepage */
-body:not(home) .random-button {
+body:not(.homepage) .random-button {
     display: none;
 }
 

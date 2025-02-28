@@ -38,7 +38,7 @@ def main():
     random_image = object_content["primaryImage"]
     title = object_content["title"]
     artist_display_name = object_content["artistDisplayName"]
-    return render_template("index.html", random_image=random_image, title=title, artist_display_name=artist_display_name)
+    return render_template("index.html", random_image=random_image, title=title, artist_display_name=artist_display_name, page_class="homepage")
 
 # Get object record for random object from the Met API
 @app.route("/random-image")
@@ -82,12 +82,12 @@ def get_random_object():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    return render_template("about.html", page_class="about")
 
 
 @app.route("/reading-room")
 def reading_room():
-    return render_template("reading-room.html")
+    return render_template("reading-room.html", page_class="reading-room")
 
 
 if __name__ == "__main__":
