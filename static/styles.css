@@ -105,6 +105,14 @@ svg {
     margin-bottom: 32px;
 }
 
+#objectTitle {
+    font-weight: bold;
+}
+
+#artistDisplayName {
+    font-size: 16px;
+}
+
 .side-panel a:hover {
     color: #3b5c00;
 }
@@ -160,15 +168,17 @@ button:hover svg {
 .side-panel .close-button {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 32px;
   font-size: 36px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Position and style the small buttons (top right corner) */
 .small-buttons {
     position: absolute;
     top: 3px;
-    right: 31px;
+    right: 32px;
     font-size: 44px;
     display: flex;
     flex-direction: column;
