@@ -1,7 +1,8 @@
 // Get random image from Python route
-const getRandomButton = document.getElementById('getRandomButton');
+const getRandomButtons = document.querySelectorAll('.random-button');
 
-getRandomButton.onclick = function() {
+getRandomButtons.forEach(button => {
+    button.onclick = function() {
     fetch('/random-image')
         .then(response => response.json())
         .then(data => {
@@ -10,8 +11,8 @@ getRandomButton.onclick = function() {
             document.getElementById('artistDisplayName').innerHTML = data["artistDisplayName"];
         })
         .catch(error => console.error('Error fetching image:', error));
-
-} 
+    }
+});
 
 // Open the side panel
 function openPanel() {

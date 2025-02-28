@@ -164,13 +164,35 @@ button:hover svg {
   font-size: 36px;
 }
 
-/* Position and style the close button (top right corner) */
-.open-button {
+/* Position and style the small buttons (top right corner) */
+.small-buttons {
     position: absolute;
     top: 3px;
     right: 31px;
     font-size: 44px;
+    display: flex;
+    flex-direction: column;
 }
+
+.small-buttons > * {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .open-button {
+    position: absolute;
+    top: 3px;
+    right: 31px;
+    font-size: 44px;
+} */
+/* 
+.random-button-small {
+    position: absolute;
+    top: 18px;
+    right: 31px;
+    font-size: 44px;
+} */
 
 .timer-buttons {
     display: flex;
