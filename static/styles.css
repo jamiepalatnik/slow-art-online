@@ -179,20 +179,10 @@ button:hover svg {
     padding: 0;
 }
 
-
-/* .open-button {
-    position: absolute;
-    top: 3px;
-    right: 31px;
-    font-size: 44px;
-} */
-/* 
-.random-button-small {
-    position: absolute;
-    top: 18px;
-    right: 31px;
-    font-size: 44px;
-} */
+/* Only display small random button on homepage */
+body:not(home) .random-button {
+    display: none;
+}
 
 .timer-buttons {
     display: flex;
