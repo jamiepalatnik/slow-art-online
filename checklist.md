@@ -13,7 +13,7 @@
 * [x] Deploy at slowartonline.com
 * [x] Design logo in Inkscape and add to site
 * [x] Add random button and timer to component in side panel, visible icons when panel is closed
-* [ ] Cross-browser and cross-device testing
+* [x] Cross-browser and cross-device testing
 * [ ] Work on responsiveness on smaller screen sizes: hide side panel on load for small screens
 * [x] Hide get new artwork button except on home
 * [x] Hamburger menu in top right

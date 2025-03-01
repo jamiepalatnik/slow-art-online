@@ -189,7 +189,7 @@ body:not(.homepage) .random-button {
 
 .timer-buttons {
     display: flex;
-    gap: 16px;
+    gap: 8px;
 }
 
 #timerButton {
