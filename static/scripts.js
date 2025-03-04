@@ -14,6 +14,8 @@ getRandomButtons.forEach(button => {
     }
 });
 
+// Side panel
+
 // Open the side panel
 function openPanel() {
     document.getElementById("side-panel").style.transform = "translateX(0%)";
@@ -25,6 +27,15 @@ function closePanel() {
     document.getElementById("side-panel").style.transform = "translateX(100%)";
     document.querySelector(".home").style.width = "calc(100% - 0px)";
 }
+
+// Close side panel on load on smaller screens
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if mobile
+    if (window.innerWidth <= 991) {       
+      // Apply closed state
+      closePanel()
+    }
+  });
 
 // Timer
 
